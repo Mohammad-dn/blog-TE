@@ -1,0 +1,18 @@
+/* .bg-img3{
+    background-image: url(kenny-eliason-3GZNPBLImWc-unsplash.jpg);
+    background-size: cover;
+background-repeat: no-repeat; 
+} */
+.bg-img2{
+background-image:url(bsck.jfif) ;
+background-size:cover;
+background-repeat: no-repeat    ;
+display: flex;
+}
+.img-icon{
+    background-image: url(like-svgrepo-com.svg);
+    background-size: contain;
+    display:flex;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}

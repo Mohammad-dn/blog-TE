@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>
+            front-end blog
+        </h1>
+        <form class="bg-img3 d-flex flex-column gap-3" id="main-content-blog">
+
+            <input class="form-control" type="text" placeholder="Title" aria-label="default input example"
+                id="blogtitle">
+
+            <input class="form-control" type="text" placeholder="how are you doing" aria-label="default input example"
+                id="how-does-it-work">
+
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2">description</label>
+            </div>
+            <div class="mb-3">
+
+                <!-- <label  for="formFile" class="form-label">chose a picture</label> -->
+                <img src="" alt="">
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <input type="submit" id="submitbutton">
+            <div>
+                <button id="likeBtn">like <p id="likeNumber">0</p> </button>
+            </div>
+    </div>
+
+    </form>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
