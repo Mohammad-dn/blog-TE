@@ -7,42 +7,7 @@ const formSubmit = document.getElementById("submitbutton");
 const savedLBlog = localStorage.getItem("keyOfBlog");
 const parsedSavedLCBlog = JSON.parse(savedLBlog) || [];
 let savedBlog = [...parsedSavedLCBlog];
-const createBlogeList=(title,disc,doing)=>{
-  const unListItem = document.createElement("ul");
-  unListItem.className = "bg-img2";
 
-  const listItem = document.createElement("li");
-  const listItemTitle = document.createElement("h3");
-  listItemTitle.innerHTML = title;
-  const listItemDo = document.createElement("p");
-  listItemDo.innerHTML = doing;
-  const listItemdesc = document.createElement("p");
-  listItemdesc.innerHTML = disc;
-  listItem.style.width = "50%";
-  const likeContent = document.createElement("div");
-  const likeNumber = document.createElement("span");
-  likeNumber.innerHTML = "1";
-  const likeIcon = document.createElement("a");
-  likeIcon.style.textDecoration = "none";
-  likeIcon.style.color = "black";
-  likeIcon.href = "https://google.com";
-  likeIcon.target = "_blanck";
-  likeIcon.innerHTML = ".";
-  likeIcon.className = "img-icon";
-  const listItemPic = document.createElement("img");
-
-  listItem.appendChild(listItemTitle);
-  listItem.appendChild(listItemDo);
-  listItem.appendChild(listItemdesc);
-  listItem.appendChild(listItemPic);
-  likeContent.appendChild(likeNumber);
-  likeContent.appendChild(likeIcon);
-  listItem.appendChild(likeContent);
-  unListItem.appendChild(listItem);
-  main.appendChild(unListItem);
-  console.log(main);
-}
-savedBlog.forEach((blog)=> {createBlogeList(blog.title,blog.desc,blog.doing)});
 const creatBlogForm = (event) => {
   event.preventDefault();
   const nonValue = () => alert("please type Title and Description");
@@ -92,5 +57,43 @@ const creatBlogForm = (event) => {
   main.appendChild(unListItem);
   console.log(main);
 };
+const createBlogeList = (title, disc, doing) => {
+  const unListItem = document.createElement("ul");
+  unListItem.className = "bg-img2";
 
-formSubmit.addEventListener("click", creatBlogForm);
+  const listItem = document.createElement("li");
+  const listItemTitle = document.createElement("h3");
+  listItemTitle.innerHTML = title;
+  const listItemDo = document.createElement("p");
+  listItemDo.innerHTML = doing;
+  const listItemdesc = document.createElement("p");
+  listItemdesc.innerHTML = disc;
+  listItem.style.width = "50%";
+  const likeContent = document.createElement("div");
+  const likeNumber = document.createElement("span");
+  likeNumber.innerHTML = "1";
+  const likeIcon = document.createElement("a");
+  likeIcon.style.textDecoration = "none";
+  likeIcon.style.color = "black";
+  likeIcon.href = "https://google.com";
+  likeIcon.target = "_blanck";
+  likeIcon.innerHTML = ".";
+  likeIcon.className = "img-icon";
+  const listItemPic = document.createElement("img");
+
+  listItem.appendChild(listItemTitle);
+  listItem.appendChild(listItemDo);
+  listItem.appendChild(listItemdesc);
+  listItem.appendChild(listItemPic);
+  likeContent.appendChild(likeNumber);
+  likeContent.appendChild(likeIcon);
+  listItem.appendChild(likeContent);
+  unListItem.appendChild(listItem);
+  main.appendChild(unListItem);
+  console.log(main);
+};
+savedBlog.forEach((blog) => {
+  createBlogeList(blog.title, blog.desc, blog.doing);
+});
+
+formSubmit.addEventListener('click',creatBlogForm)
