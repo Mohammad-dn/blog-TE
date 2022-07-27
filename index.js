@@ -5,6 +5,16 @@ const description = document.getElementById("floatingTextarea2");
 const formPic = document.getElementById("formFile");
 const formSubmit = document.getElementById("submitbutton");
 const savedLBlog = localStorage.getItem("keyOfBlog");
+const likeBtn = document.getElementById("incresslike");
+const numberOfLike = document.getElementById("numberOfLike");
+counter = 0;
+let increessNumberOfLike = () => {
+  counter++;
+  console.log(counter);
+  parseInt((numberOfLike.innerHTML = counter));
+};
+likeBtn.addEventListener("click", increessNumberOfLike);
+
 const parsedSavedLCBlog = JSON.parse(savedLBlog) || [];
 let savedBlog = [...parsedSavedLCBlog];
 
